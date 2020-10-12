@@ -104,7 +104,6 @@ class Perceptron():
                 cdelta +=1
                 clayer -=1
             iteration+=1
-            print(self.deltas)
 
 
     def result(self):

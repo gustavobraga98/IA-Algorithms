@@ -14,7 +14,9 @@ features[3] = features[3]/features[3].max()
 features = np.array(features)
 labels = np.array(labels)
 mlp = Perceptron()
-mlp.fit(features,labels,[2])
-for i in range(300):
-    mlp.train()
+mlp.fit(features,labels,[2,4,1])
+for i in range(1000):
+    print('-'*100)
+    print(mlp.weights)
+    mlp.train(lr = 0.1)
 mlp.result()
